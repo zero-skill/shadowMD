@@ -1,71 +1,78 @@
 # ShadowMD
 
-**ShadowMD** es un editor de Markdown para terminal que protege tu privacidad visual ofuscando el contenido mientras escribes.
+**ShadowMD** is a terminal Markdown editor that protects your visual privacy by obfuscating the content while you type.
 
-## Características
+[🌐 Spanish Translation](README.es.md)
+## Features
 
-- Edición de archivos Markdown (`.md`) directamente desde la terminal.
-- Ofuscación visual: mientras escribes, el contenido se muestra con caracteres aleatorios para evitar que alguien vea lo que escribes.
-- Solo la línea actual es visible claramente, pero puedes alternar la visibilidad para mostrar todo el texto o ocultarlo completamente.
-- Navegación fácil con flechas arriba y abajo para moverte entre líneas.
-- Guardado seguro con atajo `Ctrl+G`.
-- Modo sólo lectura para ver archivos sin editar.
-- Compatible con rutas absolutas, relativas y con `~` (home).
-- Opción para mostrar el contenido real al guardar mediante el flag `-v` o `--verbose`.
+- Edit Markdown (`.md`) files directly from the terminal.
+- Visual obfuscation: while typing, the content is displayed with random characters to prevent others from seeing what you write.
+- Only the current line is clearly visible, but you can toggle visibility to show all text or hide it completely.
+- Easy navigation with up and down arrow keys to move between lines.
+- Safe saving with the shortcut `Ctrl+G`.
+- Read-only mode to view files without editing.
+- Supports absolute, relative, and `~` (home) paths.
+- Option to show the real content after saving using the `-v` or `--verbose` flag.
 
-## Requisitos
+## Requirements
 
 - Python 3
-- Módulo `readchar` (instalar con `pip install readchar`)
+- `readchar` module (install with `pip install readchar`)
 
-## Instalación
+## Installation
 
-1. Clona este repositorio o descarga el script `shadowmd.py`.
-2. Instala la dependencia:
+1. Clone this repository or download the script `shadowmd.py`.
+2. Install the dependency:
 
 ```bash
 pip install readchar
 ```
-## Uso
+
+## Usage
+
 ```bash
-python shadowmd.py [ruta_al_archivo.md] [opciones]
+python shadowmd.py [path_to_file.md] [options]
 ```
-## Opciones
+
+## Options
+
 ```text
-Opción	Descripción
--v, --verbose	Mostrar contenido real al finalizar edición
---readonly	Abrir archivo en modo sólo lectura (sin edición)
+Option          Description
+-v, --verbose   Show real content after editing finishes
+--readonly      Open file in read-only mode (no editing)
 ```
 
-## Ejemplos
-### Editar archivo:
+## Examples
+
+### Edit a file:
 
 ```bash
-python shadowmd.py ~/notas/diario.md
+python shadowmd.py ~/notes/journal.md
 ```
-### Editar archivo y mostrar contenido real al terminar:
+
+### Edit a file and show real content after finishing:
 
 ```bash
-python shadowmd.py ~/notas/diario.md -v
+python shadowmd.py ~/notes/journal.md -v
 ```
-### Ver archivo sin editar:
+
+### View a file without editing:
 
 ```bash
-python shadowmd.py ~/notas/diario.md --readonly
+python shadowmd.py ~/notes/journal.md --readonly
 ```
 
-## Controles dentro del editor
-- `ENTER`: Nueva línea
+## Editor Controls
 
-- `BACKSPACE`: Borrar caracteres
+- `ENTER`: New line
 
-- `Flechas ↑ ↓`: Navegar entre líneas
+- `BACKSPACE`: Delete characters
 
-- `Ctrl+T`: Alternar visibilidad (solo línea actual / todo visible / todo oculto)
+- `Arrow keys ↑ ↓`: Navigate between lines
 
-- `Ctrl+G`: Guardar y salir
+- `Ctrl+T`: Toggle visibility (current line only / all visible / all hidden)
 
-## ¿Por qué ShadowMD?
-Cuando estás en lugares públicos o compartidos, escribir contenido sensible en la terminal puede ser un riesgo. ShadowMD ofusca tu texto para que nadie pueda leerlo a simple vista, manteniendo la usabilidad de un editor Markdown completo.
+- `Ctrl+G`: Save and exit
 
-
+## Why ShadowMD?
+When you are in public or shared places, typing sensitive content in the terminal can be risky. ShadowMD obfuscates your text so no one can read it at a glance, while maintaining the usability of a full Markdown editor.
